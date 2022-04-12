@@ -32,6 +32,7 @@ body,
 html {
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
     font-size: 16px;
+    font-family: 'Oxygen', sans-serif;
 }
 
 
@@ -92,8 +93,7 @@ figcaption {
 */
 
 .calc-container {
-    background-color: #f7f7f7;
-    /* Calc background is slightly gray and the full width of the page */
+    background-color: #f0f0f0;
     padding: 22px 0;
     /* 22px of vertical padding only */
 }
@@ -122,7 +122,7 @@ figcaption {
     display: block;
     width: 100%;
     margin: 0;
-    padding: 7px;
+    padding: 8px;
     border: 0;
 }
 
@@ -145,19 +145,40 @@ figcaption {
 * We also apply margins to them to air them out
 */
 
-.peapod,
-.freshdirect,
-.amazon {
+.amazon,
+.target,
+.walmart {
     margin: 5px 0;
     display: none;
 }
 
+.amazon.active,
+.target.active,
+.walmart.active {
+    margin: 5px 0;
+    display: block;
+}
+
+.cheap{
+    font-weight: bold;
+    font-size: 2em;
+    color: #ff69b4;
+}
+
+.cheap:after{
+    font-family: FontAwesome;
+    content: "\f006";
+}
 
 /**
 * Remove  the  default margin on the H3
 */
 
 .calculator h3 {
+    margin: 0;
+}
+
+.calculator p{
     margin: 0;
 }
 
@@ -170,7 +191,6 @@ figcaption {
     margin-bottom: 15px;
     flex-basis: 30%;
 }
-
 
 /**
 * Hide the totals by default until there's been input
